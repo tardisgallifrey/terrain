@@ -1,7 +1,7 @@
 package com.tardisgallifrey.PerlinNoise;
 
 public class Permutation {
-    int[] P = {194, 173, 140, 149, 1, 24, 195, 158,
+    public static int[] P = {194, 173, 140, 149, 1, 24, 195, 158,
             51, 183, 243, 198, 210, 74, 81, 39, 21,
             175, 135, 207, 210, 138, 39, 53, 250,
             185, 117, 123, 162, 185, 124, 62, 214,

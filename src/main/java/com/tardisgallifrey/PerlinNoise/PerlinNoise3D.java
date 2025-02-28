@@ -6,8 +6,8 @@ public class PerlinNoise3D {
     private static final int[] p = new int[512];
 
     static {
-        for (int i = 0; i < 256; i++) {
-            p[256 + i] = p[i] = Permutation.P[i];
+        for (int i = 0; i < 254; i++) {
+            p[254 + i] = p[i] = Permutation.P[i];
         }
     }
 

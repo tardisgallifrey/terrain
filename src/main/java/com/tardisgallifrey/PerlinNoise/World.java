@@ -21,6 +21,21 @@ public class World {
         return world;
     }
 
+    public List<Point> gen2DWorld(int worldSize){
+        List<Point> world2D = new ArrayList<>();
+        PerlinNoise2D perlin = new PerlinNoise2D();
+
+        //Random assign coordinates
+        for(int i = 0 ; i < worldSize; i++) {
+            for (int j = 0; j < worldSize; j++) {
+                world2D.add(new Point(i, j, perlin.noise((double)i, (double)j) * 1000.0));
+
+            }
+        }
+
+        return world2D;
+    }
+
     public void printWorld(List<Point> world, String msg){
         String coord;
 

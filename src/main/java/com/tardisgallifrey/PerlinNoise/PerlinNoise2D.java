@@ -4,15 +4,15 @@ package com.tardisgallifrey.PerlinNoise;
 
 public class PerlinNoise2D {
     //private static final int[] p = new int[512];
-    private static final int[] p = new int[256];
+    private static final int[] p = new int[512];
 
     static {
-        for (int i = 0; i < 256; i++) {
-            p[256 + i] = p[i] = Permutation.P[i];
+        for (int i = 0; i < 254; i++) {
+            p[254 + i] = p[i] = Permutation.P[i];
         }
     }
 
-    public static double noise(double x, double y) {
+    public double noise(double x, double y) {
         int X = (int) Math.floor(x) & 255;
         int Y = (int) Math.floor(y) & 255;
         x -= Math.floor(x);

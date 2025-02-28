@@ -15,7 +15,8 @@ public class Main {
         String bullet = "\u2022\t"; //prints bullet point
         World myWorld = new World();
 
-        List<Point> world = myWorld.genWorld(worldSize);
-        myWorld.printWorld(world, bullet);
+        //List<Point> world = myWorld.genWorld(worldSize);
+        List<Point> world = myWorld.gen2DWorld(worldSize);
+        myWorld.printWorld(world, null);
     }
 }

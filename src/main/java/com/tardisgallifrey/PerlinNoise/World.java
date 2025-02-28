@@ -28,7 +28,7 @@ public class World {
         //Random assign coordinates
         for(int i = 0 ; i < worldSize; i++) {
             for (int j = 0; j < worldSize; j++) {
-                world2D.add(new Point(i, j, perlin.noise((double)i, (double)j) * 1000.0));
+                world2D.add(new Point(i, j, perlin.noise((double)i + 0.01, (double)j + 0.01) * 1000.0));
 
             }
         }
@@ -46,7 +46,7 @@ public class World {
             int y = p.y();
 
             if(msg != null){
-                if(p.height() != 0){
+                if(p.height() < 0){
                     coord = msg;
                 }else{
                     coord = " \t";

@@ -17,6 +17,6 @@ public class Main {
 
         //List<Point> world = myWorld.genWorld(worldSize);
         List<Point> world = myWorld.gen2DWorld(worldSize);
-        myWorld.printWorld(world, null);
+        myWorld.printWorld(world, bullet);
     }
 }

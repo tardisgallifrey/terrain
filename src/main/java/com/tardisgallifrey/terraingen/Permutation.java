@@ -1,4 +1,8 @@
-package com.tardisgallifrey.PerlinNoise;
+package com.tardisgallifrey.terraingen;
+
+//Perlin semi random integer array of
+//0 to 255 in order to create Perlin Noise
+
 
 public class Permutation {
     public static int[] P = {194, 173, 140, 149, 1, 24, 195, 158,

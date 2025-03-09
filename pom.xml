@@ -5,13 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tardisgallifrey.PerlinNoise</groupId>
-    <artifactId>PerlinNoise</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>TerrainGen</artifactId>
+    <version>0.1</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id>
+            <url>file://${user.home}/.m2/repository</url>
+        </repository>
+    </distributionManagement>
 
 </project>

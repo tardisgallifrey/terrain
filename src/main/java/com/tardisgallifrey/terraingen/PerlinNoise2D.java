@@ -1,6 +1,13 @@
-package com.tardisgallifrey.PerlinNoise;
+package com.tardisgallifrey.terraingen;
 
 //class adapted from ChatGPT
+
+/*
+        How to use
+        public static void main(String[] args) {
+            System.out.println(noise(0.5, 0.5));
+        }
+*/
 
 public class PerlinNoise2D {
     //private static final int[] p = new int[512];
@@ -43,11 +50,6 @@ public class PerlinNoise2D {
         return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
     }
 
-    /*
-        How to use
-        public static void main(String[] args) {
-            System.out.println(noise(0.5, 0.5));
-        }
-     */
+
 }
 

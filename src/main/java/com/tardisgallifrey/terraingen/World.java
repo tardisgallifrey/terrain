@@ -1,16 +1,20 @@
-package com.tardisgallifrey.PerlinNoise;
+package com.tardisgallifrey.terraingen;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//World class allows generation of terrain in
+//random, 2D Perlin, and (later) 3D Perlin noise
+
 public class World {
 
-    public List<Point> genWorld(int worldSize){
+    //strictly random world generation
+    public List<Point> genRandWorld(int worldSize){
         List<Point> world = new ArrayList<>();
         Random rand = new Random();
 
-        //Random assign coordinates
+        //Randomly assign coordinates
         for(int i = 0 ; i < worldSize; i++) {
             for (int j = 0; j < worldSize; j++) {
                 world.add(new Point(i, j, rand.nextInt(3) ));
@@ -21,6 +25,7 @@ public class World {
         return world;
     }
 
+    //generates a 2D world via perlin noise function
     public List<Point> gen2DWorld(int worldSize){
         List<Point> world2D = new ArrayList<>();
         PerlinNoise2D perlin = new PerlinNoise2D();
@@ -36,7 +41,15 @@ public class World {
         return world2D;
     }
 
-    public void printWorld(List<Point> world, String msg){
+    //console print of 2D World
+    //parameters:
+    //      a world coordinate list of type Point
+    //      a String to print (usually one character)
+    //      color to use below Perlin 0 (background works best)
+    //      color to use above Perlin 0 (color off)
+    //
+    //if msg == null, prints coordinates and height value
+    public void printWorld(List<Point> world, String msg, String on_color, String off_color){
         String coord;
 
         //Print out coordinates
@@ -47,20 +60,22 @@ public class World {
 
             if(msg != null){
                 if(p.height() < 0){
-                    coord = msg;
+
+                    coord = on_color+msg;
                 }else{
-                    coord = " \t";
+                    coord = off_color+msg;
                 }
             }else{
                 coord = "("+x+","+y+","+p.height()+") ";
             }
 
             if(x == 0) {
-                System.out.println();
+                System.out.println(Color.RESET);
                 System.out.print(coord);
             }else {
                 System.out.print(coord);
             }
+
         }
     }
 }

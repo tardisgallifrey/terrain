@@ -1,6 +1,8 @@
-package com.tardisgallifrey.PerlinNoise;
+package com.tardisgallifrey.terraingen;
 
 //class adapted from chatGPT
+
+//3D use not yet implemented
 
 public class PerlinNoise3D {
     private static final int[] p = new int[512];
